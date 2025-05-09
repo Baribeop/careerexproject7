@@ -40,7 +40,7 @@ app.get("/all-found-items", async (req, res) => {
 
 // Add a found item
 
-app.post("/add-lost-item", async (req, res) =>{
+app.post("/add-found-item", async (req, res) =>{
 
 
     const { itemName, description, locationFound, dateFound, claimed } = req.body
@@ -117,7 +117,7 @@ app.get("/one-item-by-id/:id", async (req, res) => {
 
 // Update an item’s details or mark as claimed
 
-app.patch("/update-item/:id", async (req, res) => {
+app.patch("/update-claimed-item/:id", async (req, res) => {
 
     const {claimed } = req.body
 
